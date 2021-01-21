@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入layui样式 -->
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
+    <!-- 引入自己的样式 -->
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+    <!-- 头部的log -->
+    <div class="log_head layui-main">
+        <img src="assets/images/logo.png" alt="">
+    </div>
+    <!-- 登录注册区域 -->
+    <div class='log_join'>
+        <!-- 这是登录界面标题图片 -->
+        <div class="title-box"></div>
+
+        <form class="layui-form" id="zhuche" action="">
+            <!-- 用户名 -->
+            <div class="layui-form-item ">
+                <i class="layui-icon layui-icon-username"></i>
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input" id="yh"/>
+            </div>
+
+            <!-- 密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" required lay-verify="required|pswd" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input" id="yhipt"/>
+            </div>
+            <!-- 确认密码框 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="repassword" required lay-verify="required|repwd|pswd" placeholder="再次确认密码"
+                    autocomplete="off" class="layui-input"  />
+            </div>
+            <!-- 登录按钮 -->
+            <div class="layui-form-item">
+                <!-- 注意：表单提交按钮和普通按钮的区别，就是 lay-submit 属性 -->
+                <button class="layui-btn layui-btn-fluid layui-btn-normal"   lay-submit>注册</button>
+            </div>
+
+            <!-- 登录的div -->
+            <div class="login_box links">
+                <a href="dr.html" id="dr">去登录账号</a>
+            </div>
+
+            <!-- 去注册账号 -->
+            <!-- <div class="zc_box links">
+                <a href="javascrict:;" id='zc'>去登录账号</a>
+            </div> -->
+        </form>
+    </div>
+</body>
+<!-- 导入leyuijs     -->
+<script src="assets/lib/layui/layui.all.js"></script>
+<!-- 引入jq -->
+<script src="assets/lib/jquery.js"></script>
+<!-- 引入根地址 -->
+<script src="assets/js/api.js"></script>
+<!-- 引入自己的js -->
+<script src="assets/js/login.js"></script>
+
+</html>
