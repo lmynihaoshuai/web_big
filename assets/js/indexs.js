@@ -42,7 +42,7 @@ function indexs_xuanran() {
     })
 }
 
-
+    
 function photoGet(user) {
     var name = user.nickname || user.username
     console.log(name);
