@@ -34,10 +34,10 @@ $(function () {
       .cropper(options) // 重新初始化裁剪区域
   })
 
-
-
-  //获取用户当前设置的图片
-  var dataURL = $image
+    //更换用户头像
+  $('#qr').on('click', function (e) {
+     //获取用户当前设置的图片
+    var dataURL = $image
     .cropper('getCroppedCanvas', {
       // 创建一个 Canvas 画布
       width: 100,
@@ -45,12 +45,9 @@ $(function () {
     })
     .toDataURL('image/png')
 
-
-    
-    //更换用户头像
-  $('#qr').on('click', function () {
+    e.preventDefault()
       $.ajax({
-        tyoe:'post',
+        type:'post',
         url:'my/update/avatar',
         data:{
           avatar:dataURL
